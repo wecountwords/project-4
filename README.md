@@ -1,8 +1,8 @@
 # project-4
-Twitter-like social network app
+Build a Twitter-like social network app
 
 **Design Decisions**
-- Since this will be a twitter-like social network web-app, we will keep the twitter 280 max char limit for posts.
+- Since this will be a twitter-like app, we will keep the twitter 280 max char limit for posts.
 
 **References**
 * Course lectures, notes, previous assignments, and assigment solutions posted by Teaching Fellows
@@ -13,5 +13,8 @@ Twitter-like social network app
   - W3Schools.org : https://www.w3schools.com
   - MDN Web Docs: https://developer.mozilla.org/en-US/
 * Color Picker : https://www.w3schools.com/colors/colors_monochromatic.asp
-* Twitter API Reference: https://developer.twitter.com/en/docs/twitter-api/api-reference-index
+* Twitter API Reference : https://developer.twitter.com/en/docs/twitter-api/api-reference-index
+* API Design Guidance & Naming Conventions:
+  - Google API Design Guide : https://cloud.google.com/apis/design
+  - Microsoft Web API Design : https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design
 
