@@ -1,6 +1,9 @@
 # project-4
 Twitter-like social network app
 
+**Design Decisions**
+- Since this will be a twitter-like social network web-app, we will keep the twitter 280 max char limit for posts.
+
 **References**
 * Reference guides for Django & Python
   - Django documentation : https://docs.djangoproject.com/en/3.1/ 
