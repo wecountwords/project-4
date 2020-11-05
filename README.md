@@ -12,4 +12,5 @@ Twitter-like social network app
   - W3Schools.org : https://www.w3schools.com
   - MDN Web Docs: https://developer.mozilla.org/en-US/
 * Color Picker : https://www.w3schools.com/colors/colors_monochromatic.asp
+* Twitter API Reference: https://developer.twitter.com/en/docs/twitter-api/api-reference-index
 
