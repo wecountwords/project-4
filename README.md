@@ -17,4 +17,4 @@ Build a Twitter-like social network app
 * API Design Guidance & Naming Conventions:
   - Google API Design Guide : https://cloud.google.com/apis/design
   - Microsoft Web API Design : https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design
-
+* W3.org HTTP Status Code Reference : https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
