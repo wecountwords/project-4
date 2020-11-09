@@ -1,7 +1,7 @@
 # project-4
 Build a Twitter-like social network app
 
-**Design Decisions**
+**Design Decisions: User Flow & Functionality**
 - Since this will be a twitter-like app, let's set a char limit to mirror the Twitter 280 max char limit for posts.
 - For users that are not yet logged in, the following funcionality is available:
   - On the landing page (index.html), the "All Posts" feed should be visible."follow" and "like" buttons should be visible but disabled on each post. 
@@ -19,6 +19,14 @@ Build a Twitter-like social network app
 - All views of posts are listed in reverse chronological order.
 - A logged-in user should be able to add a post from any view with a post feed.
 - For any post in the post feed, the member can like or unlike the post or follow a post author. An author can be un-followed only from their profile page. 
+
+**Design Decisions: App Design**
+- Pages & APIs
+- Layout & Visibility
+- Event Driven Actions
+
+**Notes on Specs**
+* New Post:  logged in user
 
 **References**
 * Course lectures, notes, previous assignments, and assigment solutions posted by Teaching Fellows
