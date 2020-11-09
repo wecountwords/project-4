@@ -7,15 +7,18 @@ Build a Twitter-like social network app
   - On the landing page (index.html), the "All Posts" feed should be visible."follow" and "like" buttons should be visible but disabled on each post. 
   - Clicking on he author's name on any post will take the user to the "All Posts" feel for that specific author. "follow" and "like" buttons will be disabled on each post.
   - Login & Register are also available through links on the top nav-bar.
-- Upon login, users are taken to the landing page (index.html) with the following functionality:
-  - "All Posts" feed should be visible. "follow" and "like" buttons are enabled on each post. Add new post form is visible and enabled.
-  - The member's name should be visible in the nav-bar and clicking on the name will take the member to their profile page.
-On the landing page, a user that is not logged-in will see all posts (the All Posts feed) however they will not be able to add, edit, or navigate to an poster's profile page. 
-- From the landing page, a user that is not
-- On the landing page, a user that is not logged-in will see both the Follow and Like buttons on each post but they will be taken login page if they opt to click on either of them
-- A logged-in user will have access to the All Posts feed, a user-specific feed through the profile, and a feed that limits to posts to only those posters they are following.
-- A logged-in is able to add a post from any view with a post feed.
-- For a given post, each user can either "like" the post of "unlike" the post. But a single user cannot add multiple likes to a single post.
+- Upon login, the following functionality is available:
+  - After login, users are taken to the landing page (index.html) with the "All Posts" feed visible, all buttons enabled, and the "Add new post" form visible.
+  - The logged-in user's name (the member) should be visible in the nav-bar. Clicking on it will take the member to their Profile page.
+  - Clicking on an author name in the post will take the member to the profile page for that author.
+  - Follow, Unfollow, and Like buttons are enabled on all pages.
+- Profile pages are available only to logged-in members with the following functionality:
+  - The author-specific "All-Posts" feed is visible along with the "followers" and "following" count for the author.
+  - The "Add new post" form is available on this page.
+- From the nav-bar on any page, the logged-in user can navigate the their "Following feed" which shows all posts from all post authors they are following.
+- All views of posts are listed in reverse chronological order.
+- A logged-in user should be able to add a post from any view with a post feed.
+- For any post in the post feed, the member can like or unlike the post or follow a post author. An author can be un-followed only from their profile page. 
 
 **References**
 * Course lectures, notes, previous assignments, and assigment solutions posted by Teaching Fellows
