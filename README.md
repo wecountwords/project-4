@@ -26,7 +26,18 @@ Build a Twitter-like social network app
 - Event Driven Actions
 
 **Notes on Specs**
-* New Post:  logged in user
+* **New Post** - logged in user should be able to write a new text-based post by filling in text into a text area and then clicking a button to submit the post
+  - **Implementation** 
+  - Add New Post is a form that is visible for any logged in user on all pages with a "post feed" (i.e. list of posts).
+  - The post is stored in the Post model where content is a CharField with max 280 char limit.
+  - Post api retrieves the post and stores it in the model. Once the post is stored, it shows up in the feed.
+* **All Posts** - the _All Posts_ link in the nav-bar should take the user to a page where they can see all posts from all users, with the most recent post first. Each post should include the Poster (author) username, the content itself, the date and time of the post, and the number of likes on the post.
+  - **Implementation** 
+  - The nav-bar contains a link to the _All Posts_ feed and the link is available to all users, logged-in or otherwise, from all views. 
+  - The _All Posts_ feed is rendered on index.html. Rendering and formatting is handled via the Django template for index.html. 
+  - Each post is a bootstrap card and contains the author name, follow button, and like button in the card header. 
+  - The card body contains the post date and content. 
+  - Buttons on the card are only enabled for logged-in users.
 
 **References**
 * Course lectures, notes, previous assignments, and assigment solutions posted by Teaching Fellows
