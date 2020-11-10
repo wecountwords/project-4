@@ -20,8 +20,9 @@ Build a Twitter-like social network app
 - A logged-in user should be able to add a post from any view with a post feed.
 - For any post in the post feed, the member can like or unlike the post or follow a post author. An author can be un-followed only from their profile page. 
 
-**Design Decisions: App Design**
-- Pages & APIs
+### Design Decisions: App Design
+- Views
+  
 - Layout & Visibility
 - Event Driven Actions
 
