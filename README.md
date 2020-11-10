@@ -54,3 +54,5 @@ Build a Twitter-like social network app
   - Google API Design Guide : https://cloud.google.com/apis/design
   - Microsoft Web API Design : https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design
 * W3.org HTTP Status Code Reference : https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+* Updating a portion of a page without reloading entire page with Django & JavaScript:
+  - https://forum.djangoproject.com/t/changing-template-without-reloading-entire-page/3538/2
