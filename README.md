@@ -27,18 +27,24 @@ Build a Twitter-like social network app
 - Event Driven Actions
 
 **Notes on Specs**
-* **New Post** - logged in user should be able to write a new text-based post by filling in text into a text area and then clicking a button to submit the post
+* **New Post** - logged in user should be able to write a new text-based post by filling in text into a textarea and then clicking a button to submit the post
   - **Implementation** 
   - Add New Post is a form that is visible for any logged in user on all pages with a "post feed" (i.e. list of posts).
   - The post is stored in the Post model where content is a CharField with max 280 char limit.
-  - Post api retrieves the post and stores it in the model. Once the post is stored, it shows up in the feed.
+  - Post api takes the content and stores it in the model. Once stored it will show up in the feed when next th epage is reloaded.
+  - Open item: reload on submit is not yet implemented.
 * **All Posts** - the _All Posts_ link in the nav-bar should take the user to a page where they can see all posts from all users, with the most recent post first. Each post should include the Poster (author) username, the content itself, the date and time of the post, and the number of likes on the post.
   - **Implementation** 
-  - The nav-bar contains a link to the _All Posts_ feed and the link is available to all users, logged-in or otherwise, from all views. 
+  - The nav-bar contains a link to the _All Posts_ feed and the link is available to all users, logged-in or otherwise, from all non-login related views. 
   - The _All Posts_ feed is rendered on index.html. Rendering and formatting is handled via the Django template for index.html. 
-  - Each post is a bootstrap card and contains the author name, follow button, and like button in the card header. 
-  - The card body contains the post date and content. 
-  - Buttons on the card are only enabled for logged-in users.
+  - Each post is a bootstrap card and contains the author name, follow link, and like link in the card header. 
+  - The card body contains the post date and content along with the like count.
+* **Profile Page** - clicking on a username from the nav-bar or from any of the posts will load that user's profile page. The page should display the number of followers the user has, the number of people the user is following, all posts by that user (reverse chronological order), along with the follow / unfollow button for everyone except the post author.
+  - **Implementation** 
+  - the Profile page uses the same template as _All Posts_. The posts delivered to the template are only those of the profile author. 
+  - three stats are listed at the top of page after the author's name: total posts, followers, following.
+  - this page is available for both users that are not logged-in and logged-in users.
+  - the follow link is live on all posts for logged-in users other than that profile author.
 
 **References**
 * Course lectures, notes, previous assignments, and assigment solutions posted by Teaching Fellows
