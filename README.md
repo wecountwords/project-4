@@ -44,7 +44,7 @@ Build a Twitter-like social network app
   - the Profile page uses the same template as _All Posts_. The posts delivered to the template are only those of the profile author. 
   - three stats are listed at the top of page after the author's name: total posts, followers, following.
   - this page is available for both users that are not logged-in and logged-in users.
-  - the follow link is live on all posts for logged-in users other than that profile author.
+  - the follow link is live on all posts for logged-in users other than that profile author along with a button under the author name at the top of the page.
 
 **References**
 * Course lectures, notes, previous assignments, and assigment solutions posted by Teaching Fellows
