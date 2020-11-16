@@ -45,6 +45,10 @@ Build a Twitter-like social network app
 * **Pagination** - any page with posts contains a _Next_ and _Previous_ button to navigate across the set of posts. There are 10 posts per page with possibly fewer on the last page.
   - **Implementation** 
   - Djanogo pagination is used to implement this feature. Pagination is implemented across all pages that display posts.
+* **Like/Unlike Users** - Users can "like" and "unlike" any post by clicking on the link on the post. This will update the page asyncrhonously using JavaScript.
+  - **Implementation** 
+  - since we are now paging, with ten items on a page, this functionallity is implemented by first setting all LIKE items to LIKE and then resetting only the UNLIKE items for those that the current user has "liked. The count
+
 
 **References**
 * Course lectures, notes, previous assignments, and assigment solutions posted by Teaching Fellows
