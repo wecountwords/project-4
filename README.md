@@ -48,6 +48,8 @@ Build a Twitter-like social network app
 * **Like/Unlike Users** - Users can "like" and "unlike" any post by clicking on the link on the post. This will update the page asyncrhonously using JavaScript.
   - **Implementation** 
   - since we are now paging, with ten items on a page, this functionallity is implemented by first setting all LIKE items to LIKE and then resetting only the UNLIKE items for those that the current user has "liked. The count
+  - open item: count does not update until the next call to the server.
+* **Edit Post** - Not implemented - ran out of time.
 
 
 **References**
