@@ -45,6 +45,13 @@ Build a Twitter-like social network app
   - three stats are listed at the top of page after the author's name: total posts, followers, following.
   - this page is available for both users that are not logged-in and logged-in users.
   - the follow link is live on all posts for logged-in users other than that profile author along with a button under the author name at the top of the page.
+* **Following** - the _Following_ link in the navbar takes the user to a page with a feed that renders all posts of those authors the user is following. This link is only available to logged in users.
+  - **Implementation** 
+  - essentially this is a subset of the all-posts feed from the landing page. 
+  - to build the list of feed posts, a set of nested loops pulled the id's for all the posts from all the authors being followed and stored them in a python list. the list was handed to a query utilizing an in operator to retrieve the post objects. 
+ * **Pagination** - any page with posts contains a _Next_ and _Previous_ button to navigate across the set of posts. There are 10 posts per page with possibly fewer on the last page.
+  - **Implementation** 
+  - Djanogo pagination is used to implement this feature. Pagination is implemented across all pages that display posts.
 
 **References**
 * Course lectures, notes, previous assignments, and assigment solutions posted by Teaching Fellows
