@@ -42,7 +42,7 @@ Build a Twitter-like social network app
   - **Implementation** 
   - essentially this is a subset of the all-posts feed from the landing page. 
   - to build the list of feed posts, a set of nested loops pulled the id's for all the posts from all the authors being followed and stored them in a python list. the list was handed to a query utilizing an in operator to retrieve the post objects. 
- * **Pagination** - any page with posts contains a _Next_ and _Previous_ button to navigate across the set of posts. There are 10 posts per page with possibly fewer on the last page.
+* **Pagination** - any page with posts contains a _Next_ and _Previous_ button to navigate across the set of posts. There are 10 posts per page with possibly fewer on the last page.
   - **Implementation** 
   - Djanogo pagination is used to implement this feature. Pagination is implemented across all pages that display posts.
 
