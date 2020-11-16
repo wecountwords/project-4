@@ -19,12 +19,6 @@ Build a Twitter-like social network app
 - A logged-in user should be able to add a post or edit a post from any view with a post feed.
 - For any post in the post feed, the member can like or unlike the post. A user can like their own post but they cannot follow themselves.
 
-### Design Decisions: App Design
-- Views
-  
-- Layout & Visibility
-- Event Driven Actions
-
 **Notes on Specs**
 * **New Post** - logged in user should be able to write a new text-based post by filling in text into a textarea and then clicking a button to submit the post
   - **Implementation** 
