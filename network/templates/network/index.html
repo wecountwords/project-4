@@ -1,0 +1,96 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block page_title %}
+    <div class='container'>
+        <h2>{{ page_title|title }}</h2>
+    </div>
+{% endblock %}
+
+{% block user_profile %}
+    {% if "profile" in request.path %}
+        {% if user.is_authenticated and user.username != page_title %}
+            <button type="button" class="btn follow btn-dark btn-sm" id="follow_me" data-follow='{{ data_attr_follow }}'>{{ data_attr_follow|title }}</button>
+        {% endif %}
+        <div class="follow1">
+            <span class="follow_stats">Total Posts: {{ post_feed|length }}</span>
+            <span class="follow_stats">Followers: {{ followers }}</span>
+            <span class="follow_stats">Following: {{ following }}</span>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block add_post %}
+    {# Add New Post #}
+    <hr />
+    <div class="new_post" name="new_post">
+        <span class="name">NEW POST</span>
+            <button type="button" class="btn btn-dark btn-sm" id="submit_post">Submit New Post</button>
+        <form>
+            <div class="form-group">
+                <textarea class="form-control" id="new_post" placeholder="Enter text here" rows="3" maxlength=280 required></textarea>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <div class="post_list" data-posts='{{ data_attr_posts }}'>
+
+    {# Posts listed in reverse chronological order #}
+
+    {% for post in post_feed %}
+        <div class="post" id={{ post.id }}>
+            <div class="card">
+                <div class="card-header">
+                    <span class="name">
+                        <a class="name-link" href="{% url 'profile' post.author.id %}">{{ post.author }}</a>
+                    </span>
+
+                    {% if user.is_authenticated and user.username != page_title %}
+                         | <Span class="name like" data-postid={{ post.id }} data-count=0 data-name="like">like</span>
+                    {% endif %}
+                </div>
+                <div class="card-body">
+                  <span class="date">{{ post.timestamp }}</span>
+                  <div class='text' data-postid={{ post.id }}>{{ post.content }}</div>
+                  <div class="likes" data-postid={{ post.id }}><span class='name'>likes: </span>{{ post.like_count }}</div>
+
+                  {% if user.is_authenticated and post.author.id == user.id %}
+                    <div class="edit" data-postid={{ post.id }}><Span class='name'>edit</span></div>
+                  {% endif %}
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <div class="error_msg">No posts found. Please try later.</div>
+    {% endfor %}
+
+    {% if post_feed %}
+    {# add pagination if we have more than 10 posts #}
+    <div class="pagination">
+        <nav aria-label="pagination" id="next_prev">
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+                {% else %}
+                    <li class="page-item" disabled><a class="page-link">Previous</a></li>
+                {% endif %}
+
+                {% if page_obj.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+                {% else %}
+                    <li class="page-item"><a class="page-link">Next</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+    {% endif %}
+
+    </div>
+{% endblock %}
+
+{% block script %}
+     <script src="{% static 'network/network.js' %}"></script>
+{% endblock %}
