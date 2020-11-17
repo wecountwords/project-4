@@ -1,0 +1,5 @@
+username   email		password
+blue	   blue@mail.com	testing
+green	   green@mail.com	testing
+pink	   pink@mail.com	testing
+red	   red@mail.com		testing
