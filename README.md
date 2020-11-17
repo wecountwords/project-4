@@ -4,7 +4,7 @@ Build a Twitter-like social network app
 **Design Decisions: User Flow & Functionality**
 - Since this will be a twitter-like app, let's set a char limit to mirror the Twitter 280 max char limit for posts.
 - For users that are not yet logged in:
-  - On the landing page (index.html), the "All Posts" feed should be visible."like" buttons are not visible on the posts.  
+  - On the landing page (index.html), the "All Posts" feed should be visible.
   - Clicking on an author's name on any post will take the user to the profile view for that user. 
   - Login & Register are also available through links on the top nav-bar.
 - Upon login, the following functionality is available:
@@ -25,7 +25,7 @@ Build a Twitter-like social network app
   - Add New Post is a form that is visible for any logged in user on all pages with a "post feed" (i.e. list of posts).
   - The post is stored in the Post model where content is a CharField with max 280 char limit.
   - Post api takes the content and stores it in the model. Once stored it will show up in the feed when next th epage is reloaded.
-  - Open item: reload on submit is not yet implemented.
+  - Open item: reload on submit is not yet implemented. Using a window.location.reload command. Better implementation would entail reloading a template or using JavaScript to selectively reload changes to the page.
 * **All Posts** - the _All Posts_ link in the nav-bar should take the user to a page where they can see all posts from all users, with the most recent post first. Each post should include the Poster (author) username, the content itself, the date and time of the post, and the number of likes on the post.
   - **Implementation** 
   - The nav-bar contains a link to the _All Posts_ feed and the link is available to all users, logged-in or otherwise, from all non-login related views. 
@@ -49,7 +49,7 @@ Build a Twitter-like social network app
   - **Implementation** 
   - since we are now paging, with ten items on a page, this functionallity is implemented by first setting all LIKE items to LIKE and then resetting only the UNLIKE items for those that the current user has "liked. The count
   - open item: count does not update until the next call to the server.
-* **Edit Post** - Not implemented - ran out of time.
+* **Edit Post** - not fully implemented. upon edit, data is moved into the edit textarea. On submit, a new post is submitted. Update functionaly is still an open item.
 
 
 **References**
